@@ -182,7 +182,6 @@ void ControlUI::on_WIPBtn_clicked()
 	 bytes[13] = 0xff;
 	 ::send(Socket, (char *)bytes, 14, 0);
 	 StartAnimation();
-
  }
 
 //补抄
