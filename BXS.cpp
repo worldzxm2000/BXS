@@ -46,7 +46,7 @@ void  GetControlWidget(QString StationID, uint Socket, QWidget* parent) //<>
 //获取端口号
 int GetPort()
 {
-	return 23014;
+	return 8014;
 }
 
 //矫正时钟
@@ -864,9 +864,9 @@ void SetCommand(uint Socket, int CommandType, QString Params1, QString Params2, 
 		chk += bytes[7];
 		bytes[8] = 0;
 		chk += bytes[8];
-		bytes[9] = addr & 0xff;
+		bytes[9] = (addr >> 8) & 0xff;//地址高八位
 		chk += bytes[9];
-		bytes[10] = (addr >> 8) & 0xff;//地址高八位
+		bytes[10] = addr;
 		chk += bytes[10];
 		bytes[11] = chk & 0xff;//校验位 低八位
 		bytes[12] = (chk >> 8) & 0xff;//高八位
