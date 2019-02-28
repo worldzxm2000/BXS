@@ -185,6 +185,7 @@ void ControlUI::on_WIPBtn_clicked()
 
  }
 
+
 //补抄
  void ControlUI::on_DownBtn_clicked()
  {
