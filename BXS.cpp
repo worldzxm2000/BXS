@@ -864,9 +864,9 @@ void SetCommand(uint Socket, int CommandType, QString Params1, QString Params2, 
 		chk += bytes[7];
 		bytes[8] = 0;
 		chk += bytes[8];
-		bytes[9] = (addr >> 8) & 0xff;//地址高八位
+		bytes[9] = addr & 0xff;
 		chk += bytes[9];
-		bytes[10] = addr;
+		bytes[10] = (addr >> 8) & 0xff;//地址高八位
 		chk += bytes[10];
 		bytes[11] = chk & 0xff;//校验位 低八位
 		bytes[12] = (chk >> 8) & 0xff;//高八位
