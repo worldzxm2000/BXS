@@ -140,9 +140,9 @@ void ControlUI::on_WIPBtn_clicked()
 	 chk += bytes[11];
 	 bytes[12] = ip4;
 	 chk += bytes[12];
-	 bytes[13] = port & 0xff;//port
+	 bytes[13] = (port >> 8) & 0xff;//port
 	 chk += bytes[13];
-	 bytes[14] = (port>>8) & 0xff;
+	 bytes[14] = port & 0xff;
 	 chk += bytes[14];
 	 bytes[15] = chk & 0xff;//校验位 低八位
 	 bytes[16] = (chk >> 8) & 0xff;//高八位
@@ -182,7 +182,6 @@ void ControlUI::on_WIPBtn_clicked()
 	 bytes[13] = 0xff;
 	 ::send(Socket, (char *)bytes, 14, 0);
 	 StartAnimation();
-
  }
 
 
@@ -357,9 +356,9 @@ void ControlUI::on_WIPBtn_clicked()
 	 chk += bytes[7];
 	 bytes[8] = 0;
 	 chk += bytes[8];
-	 bytes[9] = addr & 0xff;//地址低八位
+	 bytes[9] = (addr >> 8) & 0xff;//地址高八位
 	 chk += bytes[9];
-	 bytes[10] = ( addr >>8)& 0xff;//地址高八位
+	 bytes[10] = addr;
 	 chk += bytes[10];
 	 bytes[11] = chk & 0xff;//校验位 低八位
 	 bytes[12] = (chk >> 8) & 0xff;//高八位
@@ -1105,7 +1104,6 @@ void ControlUI::updatePixmap()
 	QPixmap pixmap(QString("../Image/png/Loading%1.png").arg(m_nIndex));
 	m_pLoadingLabel->setPixmap(pixmap);
 }
-
 // 启动定时器
 void ControlUI::StartAnimation()
 {
