@@ -46,7 +46,7 @@ void  GetControlWidget(QString StationID, uint Socket, QWidget* parent) //<>
 //获取端口号
 int GetPort()
 {
-	return 8014;
+	return 23014;
 }
 
 //矫正时钟
