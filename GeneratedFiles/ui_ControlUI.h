@@ -390,15 +390,24 @@ public:
         lineEdit_Addr->setText(QString());
         groupBox_Sensor->setTitle(QApplication::translate("ControlUI", "\344\274\240\346\204\237\345\231\250", nullptr));
         label->setText(QApplication::translate("ControlUI", "\345\234\237\345\243\244", nullptr));
+   
         label_7->setText(QApplication::translate("ControlUI", "\346\270\251\346\271\277\345\272\246", nullptr));
+
         label_8->setText(QApplication::translate("ControlUI", "\346\260\224\345\216\213", nullptr));
         label_9->setText(QApplication::translate("ControlUI", "\350\276\220\345\260\204", nullptr));
+   
         label_10->setText(QApplication::translate("ControlUI", "\351\243\216\351\200\237\351\243\216\345\220\221", nullptr));
+  
         label_11->setText(QApplication::translate("ControlUI", "\345\205\211\345\222\214\346\234\211\346\225\210", nullptr));
+      
         label_12->setText(QApplication::translate("ControlUI", "\345\205\211\347\205\247\345\272\246", nullptr));
+      
         label_13->setText(QApplication::translate("ControlUI", "\347\264\253\345\244\226\347\272\277", nullptr));
+     
         label_14->setText(QApplication::translate("ControlUI", "\344\272\214\346\260\247\345\214\226\347\242\263", nullptr));
+ 
         label_15->setText(QApplication::translate("ControlUI", "\346\217\222\351\222\210\345\274\217", nullptr));
+      
         label_16->setText(QApplication::translate("ControlUI", "\351\233\250\351\207\217", nullptr));
         WSetBtn->setText(QApplication::translate("ControlUI", "\350\256\276\347\275\256", nullptr));
         TitleLabel_Name->setText(QApplication::translate("ControlUI", "\344\276\277\346\220\272\345\274\217\346\260\224\350\261\241\347\253\231", nullptr));
