@@ -603,13 +603,13 @@ void SetCommand(uint Socket, int CommandType, QString Params1, QString Params2, 
 		Time_E = QDateTime::fromString(Params2, "yyyy-MM-dd hh:mm:ss");
 
 		QString yearB, monthB, dayB, hourB, minB, yearE, monthE, dayE, hourE, minE;
-		yearB = Time_B.toString("yy");;
+		yearB = Time_B.toString("yyyy");;
 		monthB = Time_B.toString("MM");
 		dayB = Time_B.toString("dd");
 		hourB = Time_B.toString("hh");
 		minB = Time_B.toString("mm");
 
-		yearE = Time_E.toString("yy");//结束时间
+		yearE = Time_E.toString("yyyy");//结束时间
 		monthE = Time_E.toString("MM");
 		dayE = Time_E.toString("dd");
 		hourE = Time_E.toString("hh");
